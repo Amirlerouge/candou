@@ -1,0 +1,151 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Patreon Clone - Neobrutalism</title> 
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;900&display=swap" rel="stylesheet"> 
+</head> 
+<body> 
+    <nav class="navbar"> 
+        <div class="container"> 
+            <a href="#" class="logo" id="nav-home">PATREON NEO</a> 
+            <div class="nav-links"> 
+                <button id="lang-toggle" class="btn btn-secondary">FA</button> 
+                <button id="nav-explore" class="btn">Explore</button> 
+                <button id="nav-login" class="btn btn-primary">Log In</button> 
+                <button id="nav-signup" class="btn btn-black">Get Started</button> 
+            </div> 
+        </div> 
+    </nav> 
+ 
+    <main id="app-content"> 
+        <section id="view-home" class="view"> 
+            <div class="hero container"> 
+                <div class="hero-content"> 
+                    <h1 id="hero-title">Where creators <span class="highlight">connect</span> with fans.</h1> 
+                    <p id="hero-sub">Support your favorite artists, writers, and makers with a neobrutalist twist.</p> 
+                    <div class="search-bar"> 
+                        <input type="text" placeholder="Find a creator..." class="input" id="search-input"> 
+                        <button class="btn btn-primary" id="search-btn">Search</button> 
+                    </div> 
+                </div> 
+            </div> 
+            <div class="container"> 
+                <h2 class="section-title" id="featured-title">Featured Creators</h2> 
+                <div id="creator-list" class="grid"> 
+                    <div class="skeleton-card">Loading creators...</div> 
+                </div> 
+            </div> 
+        </section> 
+ 
+        <section id="view-profile" class="view" style="display: none;"> 
+            <div class="profile-header"> 
+                <div class="cover-photo" id="creator-cover"></div> 
+                <div class="profile-info-container"> 
+                    <div class="container"> 
+                        <div class="profile-info"> 
+                            <div class="profile-avatar" id="creator-avatar"></div> 
+                            <div class="profile-text"> 
+                                <h1 id="creator-name">Creator Name</h1> 
+                                <p id="creator-tagline">Creating amazing things for you.</p> 
+                                <div class="creator-stats"> 
+                                    <span class="badge" id="creator-patrons">0 Patrons</span> 
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+            <div class="container profile-layout"> 
+                <div class="profile-main"> 
+                    <div class="card about-section"> 
+                        <h2 id="about-title">About</h2> 
+                        <p id="creator-about">Content goes here...</p> 
+                    </div> 
+                    <div class="card posts-section"> 
+                        <h2 id="posts-title">Recent Posts</h2> 
+                        <div id="creator-posts" class="stack"></div> 
+                    </div> 
+                </div> 
+                <div class="profile-sidebar"> 
+                    <h2 class="section-title" id="membership-title">Select a membership</h2> 
+                    <div id="tier-list" class="stack"></div> 
+                </div> 
+            </div> 
+        </section> 
+
+        <section id="view-dashboard" class="view" style="display: none;">
+            <div class="dashboard-layout">
+                <aside class="sidebar">
+                    <div class="sidebar-content">
+                        <div class="sidebar-nav">
+                            <a href="#" class="nav-item active" id="dash-home"><span class="icon">🏠</span> <span class="nav-text">Home</span></a>
+                            <a href="#" class="nav-item"><span class="icon">🔍</span> <span class="nav-text">Explore</span></a>
+                            <a href="#" class="nav-item"><span class="icon">💬</span> <span class="nav-text">Chats</span></a>
+                            <a href="#" class="nav-item"><span class="icon">🔔</span> <span class="nav-text">Notifications</span> <span class="notif-badge">14</span></a>
+                            <a href="#" class="nav-item"><span class="icon">⚙️</span> <span class="nav-text">Settings</span></a>
+                        </div>
+                        
+                        <div class="sidebar-section">
+                            <h4 class="section-label">Memberships</h4>
+                            <div class="membership-item">
+                                <div class="mini-avatar" style="background: var(--primary);">🎨</div>
+                                <span class="nav-text">The Radical Artist</span>
+                            </div>
+                            <div class="membership-item">
+                                <div class="mini-avatar" style="background: var(--accent);">🎹</div>
+                                <span class="nav-text">Cyberpunk Soundscapes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-footer">
+                        <button class="btn btn-white btn-full"><span class="icon">📱</span> <span class="nav-text">Get app</span></button>
+                        <div class="user-profile">
+                            <div class="user-avatar">A</div>
+                            <div class="user-info">
+                                <div class="user-name">Amir</div>
+                                <div class="user-role">Member</div>
+                            </div>
+                            <button class="btn-more">⋮</button>
+                        </div>
+                    </div>
+                </aside>
+
+                <main class="dashboard-main">
+                    <div class="container dashboard-container">
+                        <h2 class="section-title">Home Feed</h2>
+                        <div id="dashboard-feed" class="stack">
+                            <!-- Posts go here -->
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </section>
+    </main> 
+ 
+    <footer class="footer"> 
+        <div class="container"> 
+            <div class="footer-grid"> 
+                <div class="footer-brand"> 
+                    <div class="logo">PATREON NEO</div> 
+                    <p id="footer-tagline">Designed with raw attitude.</p> 
+                </div> 
+                <div class="footer-links"> 
+                    <a href="#" id="footer-about">About</a> 
+                    <a href="#" id="footer-careers">Careers</a> 
+                    <a href="#" id="footer-privacy">Privacy</a> 
+                </div> 
+            </div> 
+            <div class="footer-bottom"> 
+                <p id="footer-copy">&copy; 2023 PATREON NEO - Not a real site.</p> 
+            </div> 
+        </div> 
+    </footer> 
+    <script src="script.js"></script> 
+</body> 
+</html> 
