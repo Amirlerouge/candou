@@ -40,5 +40,22 @@ This project follows the **Neobrutalism** aesthetic:
 - **Typography**: Bold 'Public Sans' with 900 weight headings.
 - **Colors**: RAW and UNFILTERED.
 
+## 🗄️ Database Setup (PostgreSQL)
+
+A PostgreSQL schema is provided in `schema.sql`. To set it up:
+
+1. **Create the database**:
+   ```sql
+   CREATE DATABASE patreon_neo;
+   ```
+2. **Run the schema**:
+   ```bash
+   psql -d patreon_neo -f schema.sql
+   ```
+
+The schema includes tables for `users`, `creators`, `tiers`, `posts`, and `memberships`, along with seed data to get you started.
+
+> **Note**: To fully connect this database to the frontend, you will need to implement a backend API (using Node.js, Python, etc.) to handle data fetching and authentication.
+
 ---
 Designed with attitude. Not a real site. 🤘
